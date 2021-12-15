@@ -6,7 +6,7 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
- viewMode='map';
+ viewMode=['map'];
 
  changeViewMode(viewMode){
 
