@@ -1,4 +1,22 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" />
+
+
+
+<ul class="nav nav-pills">
+  <li class="nav-item"> 
+    <a class="nav-link active"(click)="changeViewMode('map')"> Map View
+  </a></li>
+<li class="nav-item"> 
+<a class="nav-link active" (click)="changeViewMode('list')">
+   List View
+  </a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase = "'map'"> Map View Content </div>
+  <div *ngSwitchCase = "'list'"> List View Content</div>
+  <div *ngSwitchDefault> Otherwise </div>
+</div>
+
+
+
+  
